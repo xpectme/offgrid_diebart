@@ -1,0 +1,23 @@
+{
+  "tasks": {
+    "bundle": "deno bundle -c deno.jsonc main.ts dest/offgrid.js",
+    "bundle:worker": "deno bundle -c deno.jsonc main_worker.ts dest/worker.js",
+    "bundle:sw": "deno bundle -c deno.jsonc main_sw.ts dest/sw.js",
+    "bundle:browser": "deno bundle -c deno.jsonc main_browser.ts dest/browser.js",
+    "watch": "deno bundle -c deno.jsonc --watch main.ts dest/offgrid.js"
+  },
+  "compilerOptions": {
+    "allowJs": true,
+    "strict": false,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "dom.asynciterable",
+      "deno.ns",
+      "deno.unstable"
+    ],
+    "types": [
+      "./types/global.d.ts"
+    ]
+  }
+}
